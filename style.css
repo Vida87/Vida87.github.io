@@ -1,219 +1,388 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Adoption</title>
-    
-    <!-- Google Font Embed -->
-    <link href="https://fonts.google.com/?category=Sans+Serif&selection.family=Lato" rel="stylesheet"> 
-  </head>
-  
-  <body>
-<!--     <header class="lym-header">
-      <div class="lym-logo-container">
-        <img class="lym-logo" src="https://api.freelogodesign.org/files/86b43ad751964289b2ba1c9f0d603052/thumb/logo_200x200.png?v=0"alt="lym Logo">
-      </div>
-      <nav class="lym-nav-left">
-        <h2 class="lym-nav-element">Adoptable Pets</h2>
-        <h2 class="lym-nav-element">Adoption Process</h2>
-        <h2 class="lym-nav-element">About Us</h2>
-        <h2 class="lym-nav-element">Pet Supplies</h2>
-        <h2 class="lym-nav-element">Contact Us</h2>
-      </nav>
-      <nav class="lym-nav-right"> -->
-<!--         <h2 class="lym-nav-element"><span>J</span>jsir</h2> 
--->
-        
-<!--       <ul class="nav">
-            <li id="menu-1-button">Adoptable Pets</li>
-            <li id="menu-2-button">Adoption Process</li>
-            <li id="menu-3-button">Pet Supplies</li>
-            <li id="menu-4-button">About Us</li>
-            <li id="menu-5-button">Contact Us</li>
-            <li>Pricing</li>
-          </ul>
-        </section>
-        <div class="nav-right">
-          <p class="workspaces">Your Workspaces</p>
-          <div class="hamburger-menu" id="menu-trigger">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/hamburger.svg" alt="Hamburger icon">
-          </div>
-        </div>
-      </header> -->
+body {
+  background-color: #3A0CA3;
+  border: 4px solid #4CC9F0;
+  margin: 30px;
+}
 
-      <!--Main content-->
-<!--       <section class="placeholder"></section>  -->
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
 
-      <!--Side menu-->
-      <aside class="side-menu-position side-menu-design" id="side-menu">
-        <header class="side-menu-header">
-          <img src="https://api.freelogodesign.org/files/86b43ad751964289b2ba1c9f0d603052/thumb/logo_200x200.png?v=0" alt="Slack logo">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/x.svg" alt="Close this menu" id="menu-close">
-        </header>
-        <ul class="side-menu-content">
-          <li>Adoptable Pets</li>
-          <li>Adoption Process</li>
-          <li>Pet Supples</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-        </ul>
-      </aside>
+.side-menu-design {
+  background-color: #4CC9F0;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png');
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
 
-      <!--Dropdown Menus, notice how they are asides listed just inside the body - no deeper -->
-      <aside class="dropdown-menu" id="menu-1">
-        <h2 class="menu-header">About the Product</h2>
-        <ul class="menu-item-list">
-          <li><a href="#">How it works</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">Customers</a></li>
-          <li><a href="#">Enterprise</a></li>
-        </ul>
-      </aside>
+.global-header {
+  background-color: #f8559b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 85px;
+  padding: 15px 25px;
+  width: calc(100% - 50px);
+  font-weight: bold;
+}
 
-      <aside class="dropdown-menu" id="menu-2">
-        <h2 class="menu-header">Slack for Every Team</h2>
-        <ul class="menu-item-list">
-          <li><a href="#">Engineering</a></li>
-          <li><a href="#">IT</a></li>
-          <li><a href="#">Customer Support</a></li>
-          <li><a href="#">Project Management</a></li>
-          <li><a href="#">Sales</a></li>
-          <li><a href="#">Marketing</a></li>
-          <li><a href="#">Human Resources</a></li>
-        </ul>
-      </aside>
+.nav-left {
+  align-items: unset;
+  display: flex;
+}
 
-      <aside class="dropdown-menu" id="menu-3">
-        <h2 class="menu-header">Go Further With Slack</h2>
-        <ul class="menu-item-list">
-          <li><a href="#">Download</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">e-Books</a></li>
-          <li><a href="#">Reports</a></li>
-          <li><a href="#">API</a></li>
-        </ul>
-      </aside>        
-        
-        
-      </nav>
-    </header>
-    
-    <header class="featured-pets">
-       <h3>Featured Pets!</h3>
-    </header>
+.logo {
+  background-image: url("Logo-Final.png");
+  background-size: cover;
+  height: 100%;
+  width: 200px;
+}
 
-    <main class="lym-grid">
+.nav {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding-left: 0;
+}
 
-<article>
-  <div class="bernie-image"></div>
-  <div class="pet-description">
-    <p class="name">Bernie</p>
-    <p class="details">
-      <span class="age">5yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*no dogs, no cats, ok with children</p>
-  </div> 
-</article>
-  
-  <article>
-  <div class="harold-image"></div>
-  <div class="pet-description">
-    <p class="name">Harold</p>
-    <p class="details">
-      <span class="age">7yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*ok with older dogs, no cats, no small children</p>
-  </div> 
-</article>
-    
-  <article>
-  <div class="jasper-image"></div>
-  <div class="pet-description">
-    <p class="name">Jasper</p>
-    <p class="details">
-      <span class="age">2yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*no dogs, ok with cats, ok with children</p>
-  </div> 
-</article>
+@media (min-width: 1085px) {
+  .nav {
+    display: flex;
+  }
+}
 
-    <article>
-  <div class="william-image"></div>
-  <div class="pet-description">
-    <p class="name">William</p>
-    <p class="details">
-      <span class="age">10yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*no dogs, no cats, no children</p>
-  </div> 
-</article>
-  
-  <article>
-  <div class="jeffrey-image"></div>
-  <div class="pet-description">
-    <p class="name">Jeffrey</p>
-    <p class="details">
-      <span class="age">1yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*ok with dogs, ok with cats, ok with children</p>
-  </div> 
-</article>
-  
-  <article>
-  <div class="godzilla-image"></div>
-  <div class="pet-description">
-    <p class="name">Godzilla</p>
-    <p class="details">
-      <span class="age">About 2yrs old</span>
-    </p>
-  <p class="details">details</p>
-  <p class="restricions">*no dogs, no cats, ok with children</p>
-  </div> 
-</article> 
+ul {
+  list-style: none;
+}
 
-<!--    <section class="results">
-    <d class="results-page">
-     <ul class="results-section">
-       <a>1</a>
-       <a>2</a>
-       <a>3</a>
-       <button onclick="openModal()">></button>
-       <a class="modal-box">Next
-       </a>
-       </section>
-      </ul>
-    </div>
-    
-    <ul class="site-info">
-           <li class="row">
-                <a href="#">United States</a>
-            </li>
-            <li>></li>
-          <li>
-                <a href="#">District of Columbia</a>
-            </li>
-            <li>></li>
-            <li>
-                <a href="#">Washington</a>
-            </li>
-            <li>></li>
-            <li>20010</li>
-        </ul>
-    </section>
-    <section class="insights">
-        <h2>20010 Real Estate Insights</h2>
-      <p>Zipcode 20010 is located in Washington, District of Columbia.</p>
-<!--      </section>  -->
-      
-   <footer>
-        <ul class="copyright">
-            <li>Copyright © 2021 Love You More, LLC. All rights reserved. Equal Adopting Opportunity.</li>
-        </ul>
-    </footer>
-</body>
-</html>
+.nav li {
+  font-size: 14px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.nav-right {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 45px;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  background-color: #4CC9F0;
+  box-shadow: 0 0 2rem rgba(0,0,0,.1);
+  display: none;
+  padding: 15px;
+  position: absolute;
+  top: 100px;
+  width: 250px;
+  z-index: 10; 
+}
+
+.dropdown-menu#menu-1 {
+  left: 130px;
+}
+
+.dropdown-menu#menu-2 {
+  left: 260px;
+  min-width: 400px; 
+}
+
+.dropdown-menu#menu-3 {
+  left: 340px;
+  min-width: 400px; 
+}
+
+.menu-header {
+  font-size: 12px;
+  margin: 0;
+  padding: 0 10px 8px 10px; 
+  text-transform: uppercase;
+}
+
+.menu-item-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+#menu-2 .menu-item-list, 
+#menu-3 .menu-item-list {
+  column-count: 1;
+}
+
+.menu-item-list li a,
+.menu-item-list li a:visited,
+.menu-item-list li a:focus {
+  color: #454545;
+  display: block;
+  padding: 10px; 
+  text-decoration: none;
+}
+
+.menu-item-list li a:hover {
+  background-color: rgb(242,242,242);
+  color: #1264a3;
+}
+
+#fade-in-header {
+  display: none;
+  position: fixed;
+  top: 0;
+}
+
+#top-nav {
+  position: sticky;
+  top: 0px;
+}
+
+.show {
+  display: block;
+}
+
+/* SIDE MENU */
+.ready {
+  background-color: #4361EE;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  display: none; 
+  padding: 8px 16px;
+  transition: all 420ms ease-in-out; 
+}
+
+.ready:hover {
+  background-color: #4CC9F0;
+}
+
+@media (min-width: 1085px) {
+  .ready {
+    display: block; 
+  }  
+}
+
+.hamburger-menu {
+  display: block; 
+  cursor: pointer;
+}
+
+@media (min-width: 1085px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+/* OFF CANVAS MENU */
+.side-menu-position {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.side-menu-design {
+  background-color: #611f69;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/sidebar-background.png');
+  background-size: 1300px 700px;
+  background-repeat: repeat;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+
+.side-menu-header {
+  border-bottom: 1px solid rgba(255,255,255,.1); 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px 25px 25px;  
+}
+
+.side-menu-content {
+  color: #fff;
+  font-size: 24px; 
+  margin: 25px;
+  padding-left: 0;
+}
+
+.side-menu-content li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.side-menu-workspace {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.side-menu-download {
+  background-color: #fff;
+  color: #611f69;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* animation */
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.featured-pets {
+  background-color: #4361EE;
+  height: 45px;
+}
+
+h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 40%;
+  padding-top: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  width: 425px;
+  border: 4px solid black;
+  background-color: #7209B7;
+}
+
+.lym-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.bernie-image {
+  height: 200px;
+  background-image: url(https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/dog_cool_summer_slideshow/1800x1200_dog_cool_summer_other.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.harold-image {
+  height: 200px;
+  background-image: url(https://www.aspca.org/sites/default/files/blog_make-dogs-day_101619_main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jasper-image {
+  height: 200px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7t4GtTX9MDwzbf67MQFaM6fxiQUZ4FImvg&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.william-image {
+  height: 200px;
+  background-image: url(https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.jeffrey-image {
+  height: 200px;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6TNmkPONF74eZlDIUyWzYKDxjjq33aLwcyg&usqp=CAU);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.godzilla-image {
+  height: 200px;
+  background-image: url(http://a-z-animals.com/media/animals/images/original/bearded_dragon4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.pet-description {
+  color: white;
+  margin: 10px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Apply {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 15pt;
+}
+
+.button {
+  background-color: #f8559b;
+  border-radius: 12px;
+  padding: 14px 40px;
+  font-size: 20pt;
+}
+
+footer {
+    color: #7f8183;
+    height: 100%;
+}
+
+.copyright {
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0px 30px;
+}
